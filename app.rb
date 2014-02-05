@@ -17,6 +17,16 @@ get '/schedule' do
                 ['9pm',    'Speech'],
                 ['9.30pm', 'Painting unveiled'],
                 ['9.40pm', 'Live band plays'] ]
+  scheduletime= []
+  scheduleitem=[]
+
+schedule.each do |item|
+  if item.[0]
+    scheduletime<< item
+  else
+    scheduleitem<< item
+  end
+end
 
   erb :schedule
 end
